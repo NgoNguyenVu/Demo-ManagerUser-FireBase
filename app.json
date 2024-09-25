@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ManagerUser",
-    "slug": "ManagerUser",
+    "slug": "manageruser",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,10 +11,25 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "expo-facebook"
+    ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.nguyenvupl93.manageruser",
+      "supportsTablet": true,
+      "infoPList": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.630487360538-jvc6hc3ki06aac1vbbf1to2rf5k7en2s"
+            ]
+          }
+        ]
+      }
     },
     "android": {
+      "package": "com.nguyenvupl93.manageruser",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -22,6 +37,13 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bdd51c02-7790-49d0-a341-158dfa8bc568"
+      }
+    },
+    "owner": "nguyenvupl93",
+    "scheme": "manageruser"
   }
 }
